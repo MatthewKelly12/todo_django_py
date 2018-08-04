@@ -28,6 +28,6 @@ def completeToDo(request, todo_id):
 	return redirect('index')
 
 def deleteCompleted(request):
-	ToDo.objects.filter(complete_exact=True).delete()
+	ToDo.objects.filter(complete__exact=True).delete()
 
 	return redirect('index')
